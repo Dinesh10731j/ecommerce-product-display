@@ -91,3 +91,21 @@
     width:30px;
 
 }
+
+.Quantity{
+    height:20px;
+    width:50px;
+    padding:1px 1px;
+    text-align: center;
+    -webkit-appearance: textfield;
+    appearance: textfield;
+    margin: 0px 14px;
+ 
+}
+
+
+
+.Removebtn{
+    padding: 2px 7px;
+    cursor:pointer;
+}

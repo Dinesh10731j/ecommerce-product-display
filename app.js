@@ -45,13 +45,31 @@ const fetchProducts = async () => {
 const ShoppingItems  = (title,productsimage)=>{
 const createTitle = document.createElement("h6");
 const createImg = document.createElement("img");
-const RemoveItesm = document.createElement("button");
-RemoveItesm.innerText="fa-solid fa-trash"
+const createQuantity = document.createElement("input");
+
+const createRemoveBtn = document.createElement("button");
+createRemoveBtn.innerText="x";
+createRemoveBtn.classList.add("Removebtn")
+createQuantity.classList.add("Quantity")
+createQuantity.type = "number"; 
+createQuantity.value="1";
+
+createRemoveBtn.addEventListener("click",()=>{
+    addedItems.textContent = --addedProducts;
+   createImg.remove();
+  createTitle.remove();
+  createQuantity.remove();
+  createRemoveBtn.remove();
+})
 createImg.src = productsimage;
 createImg.classList.add("added-products-info-img")
 createTitle.innerText = title;
 userAddeedItems.appendChild(createTitle);
 userAddeedItems.appendChild(createImg);
+userAddeedItems.appendChild(createQuantity);
+userAddeedItems.appendChild(createRemoveBtn)
+
+
 }
 closeuserAddedItems.addEventListener("click",()=>{
     userAddeedItems.classList.remove("show-added-products"); 
