@@ -1,7 +1,8 @@
 const productContainer = document.querySelector(".Products");
 const addedItems = document.querySelector(".items");
 const ShoppingCart = document.querySelector(".shopping-cart");
-const userAddeedItems = document.querySelector(".added-products")
+const userAddeedItems = document.querySelector(".added-products");
+const productsTitle = document.querySelector(".products-title");
 
 let addedProducts = 0;
 const fetchProducts = async () => {
@@ -27,7 +28,7 @@ const fetchProducts = async () => {
             addToCartBtn.classList.add("addtocart");
             addToCartBtn.addEventListener("click", () => {
                 addedItems.textContent = ++addedProducts;
-                ShoppingItems(item.title)
+                ShoppingItems(item.title);
              
             });
             card.appendChild(image);
@@ -41,8 +42,10 @@ const fetchProducts = async () => {
 
 
 const ShoppingItems  = (title)=>{
-    console.log(title)
-    userAddeedItems.classList.add("show-added-products")
+    userAddeedItems.classList.add("show-added-products");
+const createTitle = document.createElement("h6");
+createTitle.innerText = title;
+userAddeedItems.appendChild(createTitle);
 }
 
 
