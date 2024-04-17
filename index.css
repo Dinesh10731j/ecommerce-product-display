@@ -4,35 +4,35 @@
     box-sizing: border-box;
 }
 
-.productsimages{
-    height:300px;
-    width:300px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.60);    
+.productsimages {
+    height: 300px;
+    width: 300px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.60);
     margin: 20px 20px;
-  
+
 }
 
 
-.Products{
+.Products {
     display: flex;
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
-    padding-left:60px;
+    padding-left: 60px;
 
 }
 
-.card{
-    height:400px;
-    width:400px;
-    background-color:#dfe6e9;
+.card {
+    height: 400px;
+    width: 400px;
+    background-color: #dfe6e9;
     margin: 20px 10px;
     border-radius: 7px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.50);
 }
 
 
-.addtocart{
+.addtocart {
     padding: 10px 12px;
     outline: none;
     border: none;
@@ -43,71 +43,72 @@
 }
 
 
-.card{
+.card {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.shopping-cart{
-    background-color:#95afc0;
-    position:absolute;
+
+.shopping-cart {
+    background-color: #95afc0;
+    position: absolute;
     height: 20px;
-    width:20px;
-    top:0;
+    width: 20px;
+    top: 0;
     right: 0;
     border-radius: 50%;
     text-align: center;
     cursor: pointer;
 }
 
-.added-products{
-    position:fixed;
-    z-index:300;
-    height:500px;
-    width:200px;
-    top:70px;
-    right:0px;
-    background-color:#95afc0;
+.added-products {
+    position: fixed;
+    z-index: 300;
+    height: 500px;
+    width: 200px;
+    top: 70px;
+    right: 0px;
+    background-color: #95afc0;
     transform: translateX(100%);
-    transition:all 0.5s;
+    transition: all 0.5s;
     padding: 10px 12px;
 }
 
 
-.added-products i{
-    position:fixed;
-  top:12px;
-  right:12px;
-  cursor: pointer;
+.added-products i {
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    cursor: pointer;
 }
 
-.show-added-products{
+.show-added-products {
     transform: translateX(0%);
 }
 
 
-.added-products-info-img{
+.added-products-info-img {
     height: 30px;
-    width:30px;
+    width: 30px;
     margin: 10px 12px;
 
 }
 
-.Quantity{
-    height:20px;
-    width:50px;
-    padding:1px 1px;
+.Quantity {
+    height: 20px;
+    width: 50px;
+    padding: 1px 1px;
     text-align: center;
     -webkit-appearance: textfield;
     appearance: textfield;
     margin: 0px 14px;
- 
+
 }
 
 
 
-.Removebtn{
+.Removebtn {
     padding: 2px 7px;
-    cursor:pointer;
+    cursor: pointer;
 }

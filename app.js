@@ -67,7 +67,7 @@ createTitle.innerText = title;
 userAddeedItems.appendChild(createTitle);
 userAddeedItems.appendChild(createImg);
 userAddeedItems.appendChild(createQuantity);
-userAddeedItems.appendChild(createRemoveBtn)
+userAddeedItems.appendChild(createRemoveBtn);
 
 
 }
