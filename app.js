@@ -9,7 +9,9 @@ const fetchProducts = async () => {
     try {
         const response = await fetch('https://dummyjson.com/products');
         const products = await response.json();
+        console.log(products)
         const items = products.products;
+        console.log(items);
 
         if (!items || items.length === 0) {
             alert("No products to display.");
@@ -23,6 +25,10 @@ const fetchProducts = async () => {
             image.classList.add("productsimages");
             image.src = item.thumbnail;
 
+            const crateDescription = document.createElement("p");
+            crateDescription.classList.add("products-description")
+            crateDescription.textContent = item.description;
+
             const addToCartBtn = document.createElement("button");
             addToCartBtn.textContent = "Add to cart";
             addToCartBtn.classList.add("addtocart");
@@ -35,6 +41,7 @@ const fetchProducts = async () => {
             card.appendChild(image);
             card.appendChild(addToCartBtn);
             productContainer.appendChild(card);
+            card.appendChild(crateDescription)
         });
     } catch (error) {
         console.log("Error fetching products:", error);
