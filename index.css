@@ -63,16 +63,30 @@
 .added-products{
     position:fixed;
     z-index:300;
-    height: 100vh;
+    height:500px;
     width:200px;
-    top:0;
+    top:70px;
     right:0px;
     background-color:#95afc0;
     transform: translateX(100%);
     transition:all 0.5s;
+    padding: 10px 12px;
+}
+
+
+.added-products i{
+    position:fixed;
+  top:12px;
+  right:0px;
 }
 
 .show-added-products{
     transform: translateX(0%);
 }
 
+
+.added-products-info-img{
+    height: 30px;
+    width:30px;
+
+}
