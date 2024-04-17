@@ -51,11 +51,8 @@ createTitle.innerText = title;
 userAddeedItems.appendChild(createTitle);
 userAddeedItems.appendChild(createImg)
 }
-
-
 closeuserAddedItems.addEventListener("click",()=>{
     userAddeedItems.classList.remove("show-added-products"); 
-})
+});
 
-ShoppingCart.addEventListener("click",ShoppingItems);
 fetchProducts();
