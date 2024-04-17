@@ -9,9 +9,9 @@ const fetchProducts = async () => {
     try {
         const response = await fetch('https://dummyjson.com/products');
         const products = await response.json();
-        console.log(products)
+     
         const items = products.products;
-        console.log(items);
+       
 
         if (!items || items.length === 0) {
             alert("No products to display");
