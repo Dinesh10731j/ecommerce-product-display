@@ -1,6 +1,8 @@
 const productContainer = document.querySelector(".Products");
 const addedItems = document.querySelector(".items");
 const ShoppingCart = document.querySelector(".shopping-cart");
+const userAddeedItems = document.querySelector(".added-products")
+
 let addedProducts = 0;
 const fetchProducts = async () => {
     try {
@@ -25,9 +27,9 @@ const fetchProducts = async () => {
             addToCartBtn.classList.add("addtocart");
             addToCartBtn.addEventListener("click", () => {
                 addedItems.textContent = ++addedProducts;
-                alert(item.title)
+                ShoppingItems(item.title)
+             
             });
-
             card.appendChild(image);
             card.appendChild(addToCartBtn);
             productContainer.appendChild(card);
@@ -38,13 +40,11 @@ const fetchProducts = async () => {
 };
 
 
-const ShoppingItems  = ()=>{
-    alert("Hello world")
+const ShoppingItems  = (title)=>{
+    console.log(title)
+    userAddeedItems.classList.add("show-added-products")
 }
 
 
 ShoppingCart.addEventListener("click",ShoppingItems);
-
-
-//initial function call 
 fetchProducts();

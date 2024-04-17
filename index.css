@@ -69,5 +69,10 @@
     right:0px;
     background-color:#95afc0;
     transform: translateX(100%);
+    transition:all 0.5s;
+}
+
+.show-added-products{
+    transform: translateX(0%);
 }
 
