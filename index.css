@@ -9,6 +9,7 @@
     width:300px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.60);    
     margin: 20px 20px;
+  
 }
 
 
@@ -89,6 +90,7 @@
 .added-products-info-img{
     height: 30px;
     width:30px;
+    margin: 10px 12px;
 
 }
 
