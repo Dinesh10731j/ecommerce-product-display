@@ -28,6 +28,8 @@ const fetchProducts = async () => {
             const crateDescription = document.createElement("p");
             crateDescription.classList.add("products-description")
             crateDescription.textContent = item.description;
+            const createPrice = document.createElement("span");
+            createPrice.textContent = `$${item.price}`;
 
             const addToCartBtn = document.createElement("button");
             addToCartBtn.textContent = "Add to cart";
@@ -41,7 +43,8 @@ const fetchProducts = async () => {
             card.appendChild(image);
             card.appendChild(addToCartBtn);
             productContainer.appendChild(card);
-            card.appendChild(crateDescription)
+            card.appendChild(crateDescription);
+            card.appendChild(createPrice);
         });
     } catch (error) {
         console.log("Error fetching products:", error);
