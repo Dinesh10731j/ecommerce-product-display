@@ -43,7 +43,7 @@ const ShoppingItems  = ()=>{
 }
 
 
-ShoppingCart.addEventListener("click",ShoppingItems)
+ShoppingCart.addEventListener("click",ShoppingItems);
 
 
 //initial function call 
