@@ -112,6 +112,8 @@
 .Removebtn {
     padding: 2px 7px;
     cursor: pointer;
+    color: tomato;
+    font-weight: bold;
 }
 
 

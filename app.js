@@ -76,7 +76,6 @@ userAddeedItems.appendChild(createImg);
 userAddeedItems.appendChild(createQuantity);
 userAddeedItems.appendChild(createRemoveBtn);
 
-
 }
 closeuserAddedItems.addEventListener("click",()=>{
     userAddeedItems.classList.remove("show-added-products"); 
