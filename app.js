@@ -14,11 +14,12 @@ const fetchProducts = async () => {
         console.log(items);
 
         if (!items || items.length === 0) {
-            alert("No products to display.");
+            alert("No products to display");
             return;
         }
 
         items.forEach(item => {
+            
             const card = document.createElement("div");
             card.classList.add("card");
             const image = document.createElement("img");
@@ -29,6 +30,7 @@ const fetchProducts = async () => {
             crateDescription.classList.add("products-description")
             crateDescription.textContent = item.description;
             const createPrice = document.createElement("span");
+            createPrice.style.color="#2ecc71"
             createPrice.textContent = `$${item.price}`;
 
             const addToCartBtn = document.createElement("button");
@@ -36,7 +38,7 @@ const fetchProducts = async () => {
             addToCartBtn.classList.add("addtocart");
             addToCartBtn.addEventListener("click", () => {
                 addedItems.textContent = ++addedProducts;
-                ShoppingItems(item.title,item.thumbnail);
+                ShoppingItems(item.title,item.thumbnail,item.price);
                 userAddeedItems.classList.add("show-added-products");
              
             });
@@ -52,10 +54,12 @@ const fetchProducts = async () => {
 };
 
 
-const ShoppingItems  = (title,productsimage)=>{
+const ShoppingItems  = (title,productsimage,price)=>{
 const createTitle = document.createElement("h6");
 const createImg = document.createElement("img");
 const createQuantity = document.createElement("input");
+const createCartPrice = document.createElement("span");
+createCartPrice.innerText = `$${price}`;
 
 const createRemoveBtn = document.createElement("button");
 createRemoveBtn.innerText="x";
@@ -70,6 +74,7 @@ createRemoveBtn.addEventListener("click",()=>{
   createTitle.remove();
   createQuantity.remove();
   createRemoveBtn.remove();
+  createCartPrice.remove();
 })
 createImg.src = productsimage;
 createImg.classList.add("added-products-info-img")
@@ -78,6 +83,7 @@ userAddeedItems.appendChild(createTitle);
 userAddeedItems.appendChild(createImg);
 userAddeedItems.appendChild(createQuantity);
 userAddeedItems.appendChild(createRemoveBtn);
+userAddeedItems.appendChild(createCartPrice)
 
 }
 closeuserAddedItems.addEventListener("click",()=>{
