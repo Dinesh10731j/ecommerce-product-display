@@ -1,7 +1,6 @@
 const productContainer = document.querySelector(".Products");
-const addedItemsCounter = document.querySelector(".added-items");
+const addedItems = document.querySelector(".items");
 let addedProducts = 0;
-
 const fetchProducts = async () => {
     try {
         const response = await fetch('https://dummyjson.com/products');
@@ -25,7 +24,7 @@ const fetchProducts = async () => {
             addToCartBtn.textContent = "Add to cart";
             addToCartBtn.classList.add("addtocart");
             addToCartBtn.addEventListener("click", () => {
-                addedItemsCounter.textContent = ++addedProducts;
+                addedItems.textContent = ++addedProducts;
             });
 
             card.appendChild(image);
@@ -37,4 +36,6 @@ const fetchProducts = async () => {
     }
 };
 
+
+//initial function call 
 fetchProducts();
