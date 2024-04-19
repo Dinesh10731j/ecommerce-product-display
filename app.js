@@ -12,6 +12,7 @@ const fetchProducts = async () => {
         const products = await response.json();
      
         const items = products.products;
+        console.log(items);
 
         UserSearchItems(items);
        
@@ -24,23 +25,27 @@ const fetchProducts = async () => {
             
             const card = document.createElement("div");
             card.classList.add("card");
+           
             const image = document.createElement("img");
             image.classList.add("productsimages");
             image.src = item.thumbnail;
-
+           
             const crateDescription = document.createElement("p");
             crateDescription.classList.add("products-description")
             crateDescription.textContent = item.description;
             const createPrice = document.createElement("span");
             createPrice.style.color="#2ecc71"
             createPrice.textContent = `$${item.price}`;
-
+            const createBrand = document.createElement("h3");
+            createBrand.innerText = item.brand;
+            createBrand.style.marginTop="10px";
+            createBrand.style.color="#353b48";
             const addToCartBtn = document.createElement("button");
             addToCartBtn.textContent = "Add to cart";
             addToCartBtn.classList.add("addtocart");
             addToCartBtn.addEventListener("click", () => {
                 addedItems.textContent = ++addedProducts;
-                ShoppingItems(item.title,item.thumbnail,item.price);
+                ShoppingItems(item.title,item.thumbnail,item.price,item.brand);
                 userAddeedItems.classList.add("show-added-products");
              
             });
@@ -49,6 +54,7 @@ const fetchProducts = async () => {
             productContainer.appendChild(card);
             card.appendChild(crateDescription);
             card.appendChild(createPrice);
+            card.appendChild(createBrand)
         });
     } catch (error) {
         console.log("Error fetching products:", error);
@@ -57,6 +63,7 @@ const fetchProducts = async () => {
 
 
 const ShoppingItems  = (title,productsimage,price)=>{
+   
 const createTitle = document.createElement("h6");
 const createImg = document.createElement("img");
 const createQuantity = document.createElement("input");
@@ -85,8 +92,7 @@ userAddeedItems.appendChild(createTitle);
 userAddeedItems.appendChild(createImg);
 userAddeedItems.appendChild(createQuantity);
 userAddeedItems.appendChild(createRemoveBtn);
-userAddeedItems.appendChild(createCartPrice)
-
+userAddeedItems.appendChild(createCartPrice);
 }
 closeuserAddedItems.addEventListener("click",()=>{
     userAddeedItems.classList.remove("show-added-products"); 
